@@ -1,6 +1,4 @@
 import { RiHeartFill, RiLinkedinFill, RiGithubFill, RiGlobalLine, RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
-import { AuthContext } from "../../contexts/AuthContext";
-import { useContext } from "react";
 
 interface RedeSocial {
     label: string;
@@ -16,7 +14,6 @@ const redesSociais: RedeSocial[] = [
 
 function Footer() {
     const anoAtual: number = new Date().getFullYear();
-    const { usuario } = useContext(AuthContext);
 
     return (
         <footer className="relative overflow-hidden bg-teal-800 dark:bg-slate-800">
