@@ -1,4 +1,3 @@
-import { Link, useNavigate } from "react-router-dom";
 import {
   RiStarFill,
   RiSparklingFill,
@@ -12,7 +11,6 @@ import { buscar } from "../../services/Service";
 import CardPostagem from "../../components/postagem/cardpostagem/CardPostagem";
 
 function Home() {
-  const navigate = useNavigate();
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
