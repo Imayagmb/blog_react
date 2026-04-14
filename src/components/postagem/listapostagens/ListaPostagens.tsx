@@ -102,7 +102,7 @@ bg-teal-500 hover:bg-teal-600 shadow-md shadow-teal-400/30 transition-colors dur
                 {/* ── Loader ── */}
                 {isLoading && (
                     <div className="flex justify-center items-center py-24">
-                        <SyncLoader color="#6366f1" size={14} margin={6} />
+                        <SyncLoader color="#00bba7" size={14} margin={6} />
                     </div>
                 )}
 

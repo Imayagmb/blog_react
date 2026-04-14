@@ -20,17 +20,14 @@ function CardTema({ tema }: CardTemaProps) {
             className="group relative flex flex-col rounded-2xl overflow-hidden bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border border-teal-100/60 dark:border-slate-700/60 shadow-lg shadow-teal-100/30 dark:shadow-teal-950/20 hover:shadow-xl hover:shadow-teal-200/40 dark:hover:shadow-teal-900/30 hover:-translate-y-1 transition-all duration-300"
             style={{ animation: "entradaBaixo 0.5s ease both" }}
         >
-            {/* ── Barra superior com gradiente ── */}
-            <header className="px-5 py-4 bg-gradient-to-r from-teal-500 to-teal-600 flex items-center gap-2.5">
+            <header className="px-5 py-4 bg-teal-600 flex items-center gap-2.5">
                 <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/20 backdrop-blur-sm">
                     <RiPriceTag3Line size={16} className="text-white" />
                 </span>
                 <span className="text-white font-bold text-sm tracking-wider uppercase">
                     Tema
                 </span>
-                <span className="ml-auto text-[10px] font-bold text-white/60 tracking-widest uppercase">
-                    #{tema.id}
-                </span>
+                
             </header>
 
             {/* ── Conteúdo ── */}
@@ -41,6 +38,7 @@ function CardTema({ tema }: CardTemaProps) {
             </div>
 
             {/* ── Ações ── */}
+            
             <div className="flex border-t border-slate-100 dark:border-slate-700/60">
                 <Link
                     to={`/editartema/${tema.id}`}

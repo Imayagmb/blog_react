@@ -7,11 +7,14 @@ import {
     RiUserLine,
 } from "react-icons/ri";
 import type Postagem from "../../../models/Postagem";
+import { useContext } from "react";
+import { AuthContext } from "../../../contexts/AuthContext";
 
 // ========== TIPOS ==========
 
 interface CardPostagemProps {
     postagem: Postagem;
+    showActions?: boolean;
 }
 
 const formatarData = (data: string): string =>
@@ -22,7 +25,11 @@ const formatarData = (data: string): string =>
 
 // ========== COMPONENTE ==========
 
-function CardPostagem({ postagem }: CardPostagemProps) {
+function CardPostagem({ postagem, showActions = true }: CardPostagemProps) {
+
+    const { usuario } = useContext(AuthContext);
+
+const isAutor = postagem.usuario?.id === usuario.id;
     return (
         <div
             className="group relative flex flex-col rounded-2xl overflow-hidden bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border border-teal-100/60 dark:border-slate-700/60 shadow-lg shadow-teal-100/30 dark:shadow-teal-950/20 hover:shadow-xl hover:shadow-teal-200/40 dark:hover:shadow-teal-900/30 hover:-translate-y-1 transition-all duration-300"
@@ -49,9 +56,6 @@ function CardPostagem({ postagem }: CardPostagemProps) {
                         {postagem.usuario?.usuario}
                     </p>
                 </div>
-                <span className="ml-auto text-[10px] font-bold text-white/50 tracking-widest uppercase shrink-0">
-                    #{postagem.id}
-                </span>
             </div>
 
             {/* body: título + texto */}
@@ -85,6 +89,7 @@ function CardPostagem({ postagem }: CardPostagemProps) {
             </div>
 
             {/* Ações */}
+            {showActions && isAutor &&(
             <div className="flex border-t border-slate-100 dark:border-slate-700/60">
                 <Link
                     to={`/editarpostagem/${postagem.id}`}
@@ -110,6 +115,7 @@ function CardPostagem({ postagem }: CardPostagemProps) {
                     Deletar
                 </Link>
             </div>
+            )}
 
             <style>{`
                 @keyframes entradaBaixo {

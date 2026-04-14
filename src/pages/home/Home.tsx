@@ -149,7 +149,9 @@ function Home() {
           {/* Grid: 1 coluna no mobile, 2 no tablet/desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {ultimasPostagens.map((postagem) => (
-              <CardPostagem key={postagem.id} postagem={postagem} />
+              <CardPostagem key={postagem.id} 
+              postagem={postagem}
+              showActions={false}/>
             ))}
           </div>
         </section>

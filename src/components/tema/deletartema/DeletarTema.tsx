@@ -102,12 +102,12 @@ function DeletarTema() {
                 className="relative z-10 w-full max-w-md"
                 style={{ animation: "entradaBaixo 0.6s ease both" }}
             >
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-400/15 to-cyan-500/15 blur-2xl scale-105" />
+                <div className="absolute inset-0 rounded-3xl bg-teal-500/15 blur-2xl scale-105"/>
 
                 <div className="relative bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-red-100/60 dark:border-slate-700/60 rounded-3xl shadow-2xl shadow-red-100/30 dark:shadow-red-950/20 overflow-hidden">
 
                     {/* ── Faixa de alerta ── */}
-                    <div className="px-6 py-5 bg-gradient-to-r from-red-500 to-rose-600 flex items-center gap-3">
+                    <div className="px-6 py-5 bg-red-500 flex items-center gap-3">
                         <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm">
                             <RiAlertLine size={20} className="text-white" />
                         </div>
@@ -160,7 +160,7 @@ function DeletarTema() {
                                 type="button"
                                 onClick={deletarTema}
                                 disabled={isLoading}
-                                className="group/btn flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-red-500 to-rose-600 shadow-lg shadow-red-300/40 dark:shadow-red-900/30 hover:shadow-xl hover:shadow-red-400/50 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:scale-100 transition-all duration-300 cursor-pointer"
+                                className="group/btn flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm text-white bg-red-600 shadow-lg shadow-red-300/40 dark:shadow-red-900/30 hover:bg-red-500 hover:shadow-xl hover:shadow-red-400/50 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:scale-100 transition-all duration-300 cursor-pointer"
                             >
                                 {isLoading ? (
                                     <ClipLoader color="#ffffff" size={20} />

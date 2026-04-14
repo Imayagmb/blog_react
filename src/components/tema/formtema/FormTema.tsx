@@ -134,13 +134,13 @@ function FormTema() {
                 className="relative z-10 w-full max-w-md"
                 style={{ animation: "entradaBaixo 0.6s ease both" }}
             >
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-teal-400/20 to-cyan-500/15 blur-2xl scale-105" />
+                <div className="absolute inset-0 rounded-3xl bg-teal-500/20 blur-2xl scale-105" />
 
                 <div className="relative bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-teal-100/60 dark:border-slate-700/60 rounded-3xl shadow-2xl shadow-teal-200/30 dark:shadow-teal-950/30 px-8 py-10 flex flex-col gap-8">
 
                     {/* ── Cabeçalho ── */}
                     <div className="flex flex-col items-center gap-3 text-center">
-                        <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 shadow-lg shadow-teal-400/30">
+                        <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-teal-600 shadow-lg shadow-teal-400/30">
                             {ehEdicao
                                 ? <RiSaveLine size={26} className="text-white" />
                                 : <RiAddCircleLine size={26} className="text-white" />
@@ -148,7 +148,7 @@ function FormTema() {
                         </div>
                         <div>
                             <h1
-                                className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent"
+                                className="text-2xl font-bold text-teal-600"
                                 style={{ fontFamily: "'Pacifico', cursive" }}
                             >
                                 {ehEdicao ? "Editar Tema" : "Novo Tema"}
@@ -205,7 +205,7 @@ function FormTema() {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="group flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-teal-500 to-cyan-600 shadow-lg shadow-teal-300/40 dark:shadow-teal-700/30 hover:shadow-xl hover:shadow-teal-400/50 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:scale-100 transition-all duration-300 cursor-pointer"
+                                className="group flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm text-white bg-teal-600 shadow-lg shadow-teal-300/40 dark:shadow-teal-700/30 hover:bg-teal-500 hover:shadow-xl hover:shadow-teal-400/50 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:scale-100 transition-all duration-300 cursor-pointer"
                             >
                                 {isLoading ? (
                                     <ClipLoader color="#ffffff" size={20} />
